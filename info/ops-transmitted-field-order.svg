@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="700" viewBox="0 0 1400 700" role="img" aria-labelledby="title description">
+  <title id="title">OPs transmitted field order</title>
+  <desc id="description">Twelve acoustic pings create eleven start-to-start intervals. The first interval is synchronization, followed by three data nibbles, four identifier nibbles, and three cyclic redundancy check nibbles.</desc>
+
+  <defs>
+    <style>
+      .title { font: 700 32px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 18px Arial, sans-serif; fill: #465269; }
+      .group-label { font: 700 19px Arial, sans-serif; fill: #172033; }
+      .group-detail { font: 15px Arial, sans-serif; fill: #465269; }
+      .cell-label { font: 700 18px Arial, sans-serif; fill: #172033; }
+      .cell-detail { font: 14px Arial, sans-serif; fill: #364258; }
+      .pulse-label { font: 15px Arial, sans-serif; fill: #364258; }
+      .note { font: 17px Arial, sans-serif; fill: #263248; }
+      .small-note { font: 15px Arial, sans-serif; fill: #59657a; }
+      .brace { fill: none; stroke: #172033; stroke-width: 2.5; }
+      .boundary { stroke: #172033; stroke-width: 2; }
+      .guide { stroke: #aab3c2; stroke-width: 1.5; stroke-dasharray: 5 5; }
+      .wave { fill: none; stroke: #172033; stroke-width: 3; stroke-linejoin: round; }
+    </style>
+    <marker id="arrow-start" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto-start-reverse">
+      <path d="M 8 0 L 0 4 L 8 8 z" fill="#465269"/>
+    </marker>
+    <marker id="arrow-end" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
+      <path d="M 0 0 L 8 4 L 0 8 z" fill="#465269"/>
+    </marker>
+  </defs>
+
+  <rect width="1400" height="700" fill="#ffffff"/>
+
+  <text x="700" y="48" text-anchor="middle" class="title">OPs transmitted field order</text>
+  <text x="700" y="78" text-anchor="middle" class="subtitle">Information is encoded in the start-to-start interval between consecutive acoustic pings</text>
+
+  <!-- Group brackets and labels -->
+  <path class="brace" d="M95 155 V135 H205 V155"/>
+  <text x="150" y="106" text-anchor="middle" class="group-label">Synchronization</text>
+  <text x="150" y="127" text-anchor="middle" class="group-detail">fixed interval</text>
+
+  <path class="brace" d="M205 155 V135 H535 V155"/>
+  <text x="370" y="106" text-anchor="middle" class="group-label">Data field</text>
+  <text x="370" y="127" text-anchor="middle" class="group-detail">12 bits · 3 nibbles</text>
+
+  <path class="brace" d="M535 155 V135 H975 V155"/>
+  <text x="755" y="106" text-anchor="middle" class="group-label">Identifier field</text>
+  <text x="755" y="127" text-anchor="middle" class="group-detail">16 bits · 4 nibbles</text>
+
+  <path class="brace" d="M975 155 V135 H1305 V155"/>
+  <text x="1140" y="106" text-anchor="middle" class="group-label">Cyclic redundancy check</text>
+  <text x="1140" y="127" text-anchor="middle" class="group-detail">12 bits · 3 nibbles</text>
+
+  <!-- Interval cells -->
+  <rect x="95" y="170" width="110" height="92" rx="3" fill="#d9dde5" class="boundary"/>
+  <rect x="205" y="170" width="110" height="92" fill="#cfe5ff" class="boundary"/>
+  <rect x="315" y="170" width="110" height="92" fill="#cfe5ff" class="boundary"/>
+  <rect x="425" y="170" width="110" height="92" fill="#cfe5ff" class="boundary"/>
+  <rect x="535" y="170" width="110" height="92" fill="#d3f0e3" class="boundary"/>
+  <rect x="645" y="170" width="110" height="92" fill="#d3f0e3" class="boundary"/>
+  <rect x="755" y="170" width="110" height="92" fill="#d3f0e3" class="boundary"/>
+  <rect x="865" y="170" width="110" height="92" fill="#d3f0e3" class="boundary"/>
+  <rect x="975" y="170" width="110" height="92" fill="#ffe1bf" class="boundary"/>
+  <rect x="1085" y="170" width="110" height="92" fill="#ffe1bf" class="boundary"/>
+  <rect x="1195" y="170" width="110" height="92" rx="3" fill="#ffe1bf" class="boundary"/>
+
+  <text x="150" y="207" text-anchor="middle" class="cell-label">SYNC</text>
+  <text x="150" y="233" text-anchor="middle" class="cell-detail">240 ms</text>
+
+  <text x="260" y="207" text-anchor="middle" class="cell-label">D2</text>
+  <text x="260" y="233" text-anchor="middle" class="cell-detail">bits 11–8</text>
+  <text x="370" y="207" text-anchor="middle" class="cell-label">D1</text>
+  <text x="370" y="233" text-anchor="middle" class="cell-detail">bits 7–4</text>
+  <text x="480" y="207" text-anchor="middle" class="cell-label">D0</text>
+  <text x="480" y="233" text-anchor="middle" class="cell-detail">bits 3–0</text>
+
+  <text x="590" y="207" text-anchor="middle" class="cell-label">I3</text>
+  <text x="590" y="233" text-anchor="middle" class="cell-detail">bits 15–12</text>
+  <text x="700" y="207" text-anchor="middle" class="cell-label">I2</text>
+  <text x="700" y="233" text-anchor="middle" class="cell-detail">bits 11–8</text>
+  <text x="810" y="207" text-anchor="middle" class="cell-label">I1</text>
+  <text x="810" y="233" text-anchor="middle" class="cell-detail">bits 7–4</text>
+  <text x="920" y="207" text-anchor="middle" class="cell-label">I0</text>
+  <text x="920" y="233" text-anchor="middle" class="cell-detail">bits 3–0</text>
+
+  <text x="1030" y="207" text-anchor="middle" class="cell-label">C2</text>
+  <text x="1030" y="233" text-anchor="middle" class="cell-detail">bits 11–8</text>
+  <text x="1140" y="207" text-anchor="middle" class="cell-label">C1</text>
+  <text x="1140" y="233" text-anchor="middle" class="cell-detail">bits 7–4</text>
+  <text x="1250" y="207" text-anchor="middle" class="cell-label">C0</text>
+  <text x="1250" y="233" text-anchor="middle" class="cell-detail">bits 3–0</text>
+
+  <!-- Interval annotation -->
+  <line x1="210" y1="305" x2="310" y2="305" stroke="#465269" stroke-width="2" marker-start="url(#arrow-start)" marker-end="url(#arrow-end)"/>
+  <text x="260" y="294" text-anchor="middle" class="small-note">one interval</text>
+  <text x="700" y="305" text-anchor="middle" class="note">For every field nibble N: interval = 250 ms + 10 ms × N</text>
+
+  <!-- Guides from interval boundaries to pulse starts -->
+  <line x1="95" y1="262" x2="95" y2="405" class="guide"/>
+  <line x1="205" y1="262" x2="205" y2="405" class="guide"/>
+  <line x1="315" y1="262" x2="315" y2="405" class="guide"/>
+  <line x1="425" y1="262" x2="425" y2="405" class="guide"/>
+  <line x1="535" y1="262" x2="535" y2="405" class="guide"/>
+  <line x1="645" y1="262" x2="645" y2="405" class="guide"/>
+  <line x1="755" y1="262" x2="755" y2="405" class="guide"/>
+  <line x1="865" y1="262" x2="865" y2="405" class="guide"/>
+  <line x1="975" y1="262" x2="975" y2="405" class="guide"/>
+  <line x1="1085" y1="262" x2="1085" y2="405" class="guide"/>
+  <line x1="1195" y1="262" x2="1195" y2="405" class="guide"/>
+  <line x1="1305" y1="262" x2="1305" y2="405" class="guide"/>
+
+  <!-- Conceptual pulse train -->
+  <path class="wave" d="M55 465 H87 V405 H103 V465 H197 V405 H213 V465 H307 V405 H323 V465 H417 V405 H433 V465 H527 V405 H543 V465 H637 V405 H653 V465 H747 V405 H763 V465 H857 V405 H873 V465 H967 V405 H983 V465 H1077 V405 H1093 V465 H1187 V405 H1203 V465 H1297 V405 H1313 V465 H1345"/>
+
+  <text x="95" y="497" text-anchor="middle" class="pulse-label">P0</text>
+  <text x="205" y="497" text-anchor="middle" class="pulse-label">P1</text>
+  <text x="315" y="497" text-anchor="middle" class="pulse-label">P2</text>
+  <text x="425" y="497" text-anchor="middle" class="pulse-label">P3</text>
+  <text x="535" y="497" text-anchor="middle" class="pulse-label">P4</text>
+  <text x="645" y="497" text-anchor="middle" class="pulse-label">P5</text>
+  <text x="755" y="497" text-anchor="middle" class="pulse-label">P6</text>
+  <text x="865" y="497" text-anchor="middle" class="pulse-label">P7</text>
+  <text x="975" y="497" text-anchor="middle" class="pulse-label">P8</text>
+  <text x="1085" y="497" text-anchor="middle" class="pulse-label">P9</text>
+  <text x="1195" y="497" text-anchor="middle" class="pulse-label">P10</text>
+  <text x="1305" y="497" text-anchor="middle" class="pulse-label">P11</text>
+
+  <text x="95" y="545" text-anchor="middle" class="note">first ping</text>
+  <line x1="95" y1="525" x2="95" y2="475" stroke="#465269" stroke-width="1.8" marker-end="url(#arrow-end)"/>
+
+  <text x="1305" y="545" text-anchor="middle" class="note">last ping</text>
+  <line x1="1305" y1="525" x2="1305" y2="475" stroke="#465269" stroke-width="1.8" marker-end="url(#arrow-end)"/>
+
+  <rect x="215" y="575" width="970" height="78" rx="10" fill="#f3f5f8" stroke="#c6ccd6" stroke-width="1.5"/>
+  <text x="700" y="607" text-anchor="middle" class="note">Conceptual layout — horizontal distances are not drawn to time scale.</text>
+  <text x="700" y="635" text-anchor="middle" class="small-note">The pings mark interval boundaries; their widths do not encode the data.</text>
+</svg>
